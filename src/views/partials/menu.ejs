@@ -1,0 +1,109 @@
+<div class="menu">
+        <nav class="menulist"><!--  collapsed-nav> -->
+            <%# 
+            <div class="searchbox">
+                <input class="searchboxitem" 
+                    name="search_query" 
+                    type="text" role="combobox" 
+                    placeholder="< %#= partials.menu.search % >" 
+                    >
+            </div>
+            %>
+            <div class="categorylist">
+                <ul>
+                    <li class="listmenu">
+                        <div class="button">
+                            <div class="arrow">
+                                <a class="menulink" href="/">
+                                    <i class="fas fa-home"></i> <%= partials.menu.home  %>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="listmenu">
+                        <button class="button" onclick="list(2)">
+                            <div class="arrow">
+                                <i class="fas fa-angle-down"></i>
+                                <span><%= partials.menu.login.text %></span>
+                            </div>
+                        </button>
+                        <ul>
+                            <li>
+                                <a class="menulink" href="/login">
+                                <i class="fas fa-user-astronaut"></i> <%= partials.menu.login[1] %></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="listmenu">
+                        <button class="button" onclick="list(3)">
+                            <div class="arrow">
+                                <i class="fas fa-angle-down"></i>
+                                <span><%= partials.menu.status.text %></span>
+                            </div>
+                        </button>
+                        <ul>
+                            <li><a class="menulink" href="/status#conexion">
+                                <i class="fas fa-wifi"></i> <%= partials.menu.status[1] %></a>
+                            </li>
+                            <li><a class="menulink" href="/status#bateria">
+                                <i class="fas fa-battery-three-quarters"></i> <%= partials.menu.status[2] %></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="listmenu">
+                        <button class="button" onclick="list(4)">
+                            <div class="arrow">
+                                <i class="fas fa-angle-down"></i>
+                                <span><%= partials.menu.data.text %></span>
+                            </div>
+                        </button>
+                        <ul>
+                            <li><a class="menulink" href="/data#cargar">
+                                <i class="fas fa-upload"></i> <%= partials.menu.data[1] %></a>
+                            </li>
+                            <li><a class="menulink" href="/data#reiniciar">
+                                <i class="fas fa-redo"></i> <%= partials.menu.data[2] %></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="listmenu">
+                        <button class="button" onclick="list(5)">
+                            <div class="arrow">
+                                <i class="fas fa-angle-down"></i>
+                                <i class="fas fa-info-circle"></i>
+                                <span> <%= partials.menu.info.text %></span>
+                            </div>
+                        </button>
+                        <ul>
+                            <li><a class="menulink" href="/grupo">
+                                <i class="fas fa-briefcase"></i> <%= partials.menu.info[1] %></a>
+                            </li>
+                            <li><a class="menulink" href="/info">
+                                <i class="fas fa-microchip"></i> <%= partials.menu.info[2] %></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="listmenu">
+                        <button class="button"onclick="list(6)">
+                            <div class="arrow">
+                                <i class="fas fa-angle-down"></i>
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span> <%= partials.menu.maps.text %></span>
+                            </div>
+                        </button>
+                        <ul>
+                            <li><a class="menulink" href="/maps">
+                                <i class="fas fa-location-arrow"></i> <%= partials.menu.maps[1] %></a>
+                            </li>
+                            <li><a class="menulink" href="/maps">
+                                <i class="fas fa-map-marker-alt"></i> <%= partials.menu.maps[2] %></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>

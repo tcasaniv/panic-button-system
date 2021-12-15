@@ -1,0 +1,12 @@
+{
+    "dir": "auto",
+    "display": "standalone",
+    "name": "Sistema de Botón de Pánico",
+    "short_name": "Panic Button",
+    "scope": "/",
+    "lang": "es",
+    "description": "El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias.",
+    "theme_color": "#379c6f",
+    "background_color": "#1d1d1d",
+    "screenshots": []
+  }

@@ -1,0 +1,176 @@
+{
+    "es":{
+        "website":{
+            "title": "Sistema de Botón de Pánico",
+            "description": "El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias.",
+            "readMore": "Leer más",
+            "url": "http://botondepanico.tk",
+            "webmanifest": "/webmanifest.jsonc",
+            "icon": "/img/imglogo.ico",
+            "pnglogo": "/img/imglogo.png",
+            "mainurl": "/"
+        },
+        "pages":{
+            "index":{
+                "title": "Sistema de Botón de Pánico",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "url": "/",
+                "message": "Bienvenido"
+            },
+            "login":{
+                "title": "Iniciar sesión",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "url": "/login",
+                "message": "Login"
+            },
+            "signup":{},
+            "status":{},
+            "data":{},
+            "grupo":{},
+            "info":{},
+            "maps":{
+                "title": "Ubicación de los dispositivos",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Panic Button System",
+                "url": "/maps",
+                "message": "Mapa"
+            },
+            "developing":{},
+            "offline": {
+                "title": "No tienes conexión",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "url": "/offline",
+                "message": "Offline"
+            }
+        },
+        "partials": {
+            "head":{},
+            "loader":{
+                "text": "Cargando",
+                "gif": "/img/loader.gif"
+            },
+            "header":{},
+            "menu": {
+                "button": "Menú",
+                "home": "Página Principal",
+                "search": "Buscar",
+                "login":{
+                    "text": "Login",
+                    "1": "Iniciar sesión"
+                },
+                "status":{
+                    "text": "Estado",
+                    "1": "Conexión",
+                    "2": "Batería"
+                },
+                "data":{
+                    "text": "Datos obtenidos",
+                    "1": "Cargar",
+                    "2": "Reiniciar"
+                },
+                "info":{
+                    "text": "Más información",
+                    "1": "Sobre el grupo 1",
+                    "2": "Sobre el dispositivo",
+                    "3": "Sobre el proyecto"
+                },
+                "maps":{
+                    "text": "Ubicación",
+                    "1": "De los dispositivos",
+                    "2": "De las alertas"
+                }
+            },
+            "footer": {
+                "copyright": "Todos los derechos reservados al grupo 1 - Smart Cities - UNSA - 2021"
+            }
+        }
+    },
+    "en": {
+        
+        "website":{
+            "title": "Panic Button System",
+            "description": "The SOS Emergency Panic Button with Wi-Fi provides a means to create distress signals in case of emergencies.",
+            "readMore": "Read more",
+            "url": "http://botondepanico.tk/en/",    
+            "webmanifest": "/webmanifest.jsonc",
+            "icon": "/img/imglogo.ico",
+            "pnglogo": "/img/imglogo.png",
+            "mainurl": "/"
+        },
+        "pages":{
+            "index":{
+                "title": "Panic Button System",
+                "lema": "Distress alert in a triz.",
+                "description": "Panic Button System",
+                "url": "/",
+                "message": "Welcome"
+            },
+            "login":{
+                "title": "Iniciar sesión",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Panic Button System",
+                "url": "/login",
+                "message": "Login"
+            },
+            "signup":{},
+            "status":{},
+            "data":{},
+            "grupo":{},
+            "info":{},
+            "maps":{
+                "title": "Location of devices",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Panic Button System",
+                "url": "/en/maps/",
+                "message": "Maps"
+            },
+            "developing":{},
+            "offline": {
+                "title": "No tienes conexión",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "url": "/offline",
+                "message": "Offline"
+            }
+        },
+        "partials": {
+            "head":{},
+            "loader":{
+                "text": "Loading",
+                "gif": "/img/loader.gif"
+            },
+            "header":{},
+            "menu": {
+                "button": "Menu",
+                "home": "Home page",
+                "search": "Buscar",
+                "login":{
+                    "text": "Login",
+                    "1": "LogIn"
+                },
+                "status":{
+                    "text": "Status",
+                    "1": "Conection",
+                    "2": "Battery"
+                },
+                "data":{
+                    "text": "Data",
+                    "1": "Upload",
+                    "2": "Reset"
+                },
+                "info":{
+                    "text": "More info...",
+                    "1": "About the group 1",
+                    "2": "About the dispositive",
+                    "3": "About the project"
+                }
+            },
+            "footer": {
+                "copyright": "All rights reserved to group 1 - Smart Cities - UNSA - 2021"
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es-ES" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <title><%= title %></title>
+    <meta name="description" content="El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias."/>
+    <link rel="canonical" href="http://botondepanico.tk/index.html">
+    
+    <meta property="og:title" content=<%= title %> data-rh="true">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://botondepanico.tk" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/7STbq-ZYhmY/maxresdefault.jpg" />
+    <meta property="og:description" content="El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias." />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Sistema de Botón de Pánico" />
+    
+    <%# Opcionales
+    <meta property="og:audio" content="https://example.com/bond/theme.mp3" />
+    <meta property="og:determiner" content="the" />
+    
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    
+    <meta property="og:video" content="https://example.com/bond/trailer.swf" />
+    %>
+    
+    <%# 
+    <!-- Search Engine Optimization by Rank Math - https://s.rankmath.com/home -->
+    
+    <meta name="robots" content="index,follow"/>
+    
+    <meta property="fb:app_id" content="236804760387339">
+    <meta property="og:image" content="https://i.ytimg.com/vi/7STbq-ZYhmY/maxresdefault.jpg">
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/7STbq-ZYhmY/maxresdefault.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sistema de Botón de Pánico">
+    <meta name="twitter:description" content="El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias.">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/7STbq-ZYhmY/maxresdefault.jpg">
+    <script type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"https:\/\/www.bluestacks.com\/es\/index.html#website","url":"https:\/\/www.bluestacks.com\/es\/index.html","name":"BlueStacks","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.bluestacks.com\/search\/{search_term_string}\/es\/","query-input":"required name=search_term_string"}},{"@context":"https:\/\/schema.org","@type":"Organization","@id":"https:\/\/www.bluestacks.com\/es\/index.html#organization","name":"BlueStacks","url":"https:\/\/www.bluestacks.com","sameAs":["https:\/\/www.facebook.com\/BlueStacksInc\/","https:\/\/twitter.com\/bluestacksinc\/","https:\/\/www.reddit.com\/r\/BlueStacks\/","https:\/\/www.linkedin.com\/company\/bluestacks\/","https:\/\/www.youtube.com\/channel\/UC9eB0Ysv4UcKgjEy47zcZ5A"],"logo":"https:\/\/cdn-www.bluestacks.com\/bs-images\/BS-logo-icon.jpg"}]</script>
+    <!-- /Rank Math WordPress SEO plugin -->
+    %>
+    <link rel="manifest" href="/manifest.json" crossorigin="anonymous">
+    <%# 
+    <link rel="manifest" href="/webmanifest.json" crossorigin="use-credentials">
+    <link rel="alternate" hreflang="x-default" href="https://botondepanico.tk">
+    <link rel="mask-icon" sizes="any" href="https://abs.twimg.com/responsive-web/client-web/icon-svg.168b89d5.svg" color="#1D9BF0">
+    <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter-pip.2.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="https://abs.twimg.com/responsive-web/client-web/icon-ios.b1fc7275.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Twitter">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <meta http-equiv="origin-trial" content="Apir4chqTX+4eFxKD+ErQlKRB/VtZ/dvnLfd9Y9Nenl5r1xJcf81alryTHYQiuUlz9Q49MqGXqyaiSmqWzHUqQwAAABneyJvcmlnaW4iOiJodHRwczovL3R3aXR0ZXIuY29tOjQ0MyIsImZlYXR1cmUiOiJDb250YWN0c01hbmFnZXIiLCJleHBpcnkiOjE1NzUwMzUyODMsImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <link href="https://twitter.com/home" rel="canonical" data-rh="true">
+    %> 
+    
+    <link rel=" shortcut icon" href="/img/imglogo.ico" type="image/x-icon">
+
+
+
+
+    <%- include ('./partials/head.ejs')%>
+</head>
+
+<body dark>
+    <%# Insertar loader %>
+    <%- include ('partials/loader.ejs')%>
+
+    <%# Insertar header %>
+    <%- include ('partials/header.ejs')%>
+
+    <div id="container" class="grid">
+        <div class="separate">
+            <%# Insertar menú lateral %>
+            <%- include ('partials/menu.ejs')%>
+
+            <%# Aquí va todo el contenido principal %>
+            <div class="principal">
+                <h1 class="wip"><%= message %></h1>
+            </div>
+        </div>
+    </div>
+
+    <%# Insertar footer %>
+    <%- include ('partials/footer.ejs')%>
+</body>
+
+</html>

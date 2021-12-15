@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- <html lang="es-ES" prefix="og: http://ogp.me/ns#"> -->
+<html lang="es-412" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <title><%= pages.maps.title %></title>
+    <meta property="og:title" content="<%= pages.maps.title %>" data-rh="true">
+    <meta name="description" content="<%= website.description %>" />
+    <%- include ('./partials/head.ejs')%>
+</head>
+
+<body dark>
+    <%# Insertar loader %>
+    <%- include ('partials/loader.ejs')%>
+    <%# Insertar header %>
+    <%- include ('partials/header.ejs')%>
+    <div id="container" class="grid">
+        <div class="separate">
+            <%# Insertar menú lateral %>
+            <%- include ('partials/menu.ejs')%>
+            <%# Aquí va todo el contenido principal %>
+            <div class="principal">
+                <h1 class="maintitle"><%= pages.maps.title %></h1>
+
+                <table  class="table-dark table" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th class="col-lg-1">ID</th>
+                            <th class="col-lg-1">Producto</th>
+                            <th class="col-lg-1">Gravedad</th>
+                            <th class="col-lg-1">Fecha</th>
+                            <th class="col-lg-1">Hora</th>
+                            <th class="col-lg-1">Latitud</th>
+                            <th class="col-lg-1">Longitud</th>
+                            <th class="col-lg-3"> Archivo del evento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd gradeX">
+                            <td>1</td>
+                            <td>MGR-3774</td>
+                            <td>Alta</td>
+                            <td>14/03/2018</td>
+                            <td>23:12:02</td>
+                            <td>-23.43</td>
+                            <td>-44.12</td>
+                            <td><a href="#">http://alertbox.br/arquivo_MGW-3454.txt</a></td>
+                        </tr>
+                        <tr class="gradeU">
+                            <td>2</td>
+                            <td>AAQ-5412</td>
+                            <td>Baixa</td>
+                            <td>20/03/2018</td>
+                            <td>13:12:02</td>
+                            <td>-22.43</td>
+                            <td>-43.12</td>
+                            <td><a class="link" href="#">http://alertbox.br/arquivo_SPQ-5412.txt</a></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <%# Insertar footer %>
+    <%- include ('partials/footer.ejs')%>
+</body>
+
+</html>

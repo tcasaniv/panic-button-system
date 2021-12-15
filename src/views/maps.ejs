@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- <html lang="es-ES" prefix="og: http://ogp.me/ns#"> -->
+<html lang="es-412" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <title><%= pages.maps.title %></title>
+    <meta property="og:title" content="<%= pages.maps.title %>" data-rh="true">
+    <meta name="description" content="<%= website.description %>" />
+    <%- include ('./partials/head.ejs')%>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy6-xL5zglfeYB8VRApLdE_OKL2m9kaeM"></script>
+
+    <script>
+        var myCenter = new google.maps.LatLng(-22.249613, -45.719585);
+
+        function initialize() {
+            var mapProp = {
+                center: myCenter,
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+                animation: google.maps.Animation.BOUNCE
+            });
+
+            marker.setMap(map);
+            // Zoom to 9 when clicking on marker
+            google.maps.event.addListener(marker, 'click', function() {
+                map.setZoom(16);
+                map.setCenter(marker.getPosition());
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content: "[ Acidente ] <br>  Placa: MGW-3454 <br> Gravidade: Alta   " //<br>PLACA:A67-435 <br> EVENTO:CV+CL"
+            });
+
+            infowindow.open(map, marker);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+
+<body dark>
+    <%# Insertar loader %>
+    <%- include ('partials/loader.ejs')%>
+    <%# Insertar header %>
+    <%- include ('partials/header.ejs')%>
+    <div id="container" class="grid">
+        <div class="separate">
+            <%# Insertar menú lateral %>
+            <%- include ('partials/menu.ejs')%>
+            <%# Aquí va todo el contenido principal %>
+            <div class="principal">
+                <h1 class="maintitle"><%= pages.maps.title %></h1>
+
+                <div id="googleMap" style="width:1020px;height:440px;"></div>
+            </div>
+        </div>
+    </div>
+    <%# Insertar footer %>
+    <%- include ('partials/footer.ejs')%>
+</body>
+
+</html>

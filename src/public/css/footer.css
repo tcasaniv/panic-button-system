@@ -1,0 +1,31 @@
+.sitefooter {
+    display: block;
+    background-color: var(--html-bg-third);
+    padding: 2px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sitefooter>h1 {
+    color: white;
+    justify-content: center;
+    display: flex;
+    font-size: small;
+    /* margin-left: calc(100% / 2); */
+}
+
+.linkfooter {
+    margin-right: 15px;
+}
+
+.footerlink {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: 250ms;
+}
+
+.footerlink:hover {
+    color: #5bcc99;
+}
