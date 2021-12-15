@@ -1,0 +1,20 @@
+{
+    "name": "panic-button-system",
+    "version": "1.0.0",
+    "description": "El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
