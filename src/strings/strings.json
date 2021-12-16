@@ -133,35 +133,65 @@
         "pages":{
             "index":{
                 "title": "Panic Button System",
-                "lema": "Distress alert in a triz.",
+                "lema": "Alerta de auxilio en un triz.",
                 "description": "Panic Button System",
                 "url": "/",
                 "message": "Welcome"
             },
             "login":{
-                "title": "Iniciar sesión",
+                "title": "LoadIn",
                 "lema": "Alerta de auxilio en un triz.",
                 "description": "Panic Button System",
-                "url": "/login",
+                "url": "/en/login",
                 "message": "Login"
             },
             "signup":{},
-            "status":{},
-            "data":{},
-            "grupo":{},
-            "info":{},
-            "maps":{
-                "title": "Location of devices",
+            "status":{
+                "title": "Estado",
                 "lema": "Alerta de auxilio en un triz.",
                 "description": "Panic Button System",
-                "url": "/en/maps/",
-                "message": "Maps"
+                "url": "/en/status",
+                "message": "Estado"
             },
-            "developing":{},
-            "offline": {
-                "title": "No tienes conexión",
+            "data":{
+                "title": "Datos",
                 "lema": "Alerta de auxilio en un triz.",
-                "description": "Sistema de Botón de Pánico",
+                "description": "Panic Button System",
+                "url": "/en/data",
+                "message": "Eventos"
+            },
+            "grupo":{
+                "title": "About Group 1",
+                "lema": "Distress alert in a triz.",
+                "description": "Panic Button System",
+                "url": "/en/grupo",
+                "message": "Grupo 1"
+            },
+            "info":{
+                "title": "Information",
+                "lema": "Distress alert in a triz.",
+                "description": "Panic Button System",
+                "url": "/info",
+                "message": "Grupo 1"
+            },
+            "maps":{
+                "title": "Location of devices",
+                "lema": "Distress alert in a triz.",
+                "description": "Panic Button System",
+                "url": "/maps",
+                "message": "Mapa"
+            },
+            "developing":{
+                "title": "About the project",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Panic Button System",
+                "url": "/maps",
+                "message": "Mapa"
+            },
+            "offline": {
+                "title": "No conection",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Panic Button System",
                 "url": "/offline",
                 "message": "Offline"
             }
@@ -175,8 +205,8 @@
             "header":{},
             "menu": {
                 "button": "Menu",
-                "home": "Home page",
-                "search": "Buscar",
+                "home": "Home",
+                "search": "Search",
                 "login":{
                     "text": "Login",
                     "1": "LogIn"
@@ -189,13 +219,18 @@
                 "data":{
                     "text": "Data",
                     "1": "Upload",
-                    "2": "Reset"
+                    "2": "Reload"
                 },
                 "info":{
-                    "text": "More info...",
-                    "1": "About the group 1",
-                    "2": "About the dispositive",
+                    "text": "More info",
+                    "1": "About group 1",
+                    "2": "About the device",
                     "3": "About the project"
+                },
+                "maps":{
+                    "text": "Ubication",
+                    "1": "Of the devices",
+                    "2": "Alerts"
                 }
             },
             "footer": {
