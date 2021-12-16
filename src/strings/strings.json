@@ -26,7 +26,13 @@
                 "message": "Login"
             },
             "signup":{},
-            "status":{},
+            "status":{
+                "title": "Estado",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "url": "/status",
+                "message": "Estado"
+            },
             "data":{
                 "title": "Datos",
                 "lema": "Alerta de auxilio en un triz.",
@@ -42,10 +48,10 @@
                 "message": "Grupo 1"
             },
             "info":{
-                "title": "Sobre el Grupo 1",
+                "title": "Datos obtenidos",
                 "lema": "Alerta de auxilio en un triz.",
                 "description": "Sistema de Botón de Pánico",
-                "url": "/grupo",
+                "url": "/info",
                 "message": "Grupo 1"
             },
             "maps":{
@@ -55,7 +61,13 @@
                 "url": "/maps",
                 "message": "Mapa"
             },
-            "developing":{},
+            "developing":{
+                "title": "Sobre el proyecto",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Panic Button System",
+                "url": "/maps",
+                "message": "Mapa"
+            },
             "offline": {
                 "title": "No tienes conexión",
                 "lema": "Alerta de auxilio en un triz.",

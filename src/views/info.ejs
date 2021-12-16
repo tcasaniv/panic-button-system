@@ -3,8 +3,8 @@
 <html lang="es-412" prefix="og: http://ogp.me/ns#">
 
 <head>
-    <title><%= pages.data.title %></title>
-    <meta property="og:title" content="<%= pages.data.title %>" data-rh="true">
+    <title><%= pages.info.title %></title>
+    <meta property="og:title" content="<%= pages.info.title %>" data-rh="true">
     <meta name="description" content="<%= website.description %>" />
     <%- include ('./partials/head.ejs')%>
 </head>
@@ -20,7 +20,7 @@
             <%- include ('partials/menu.ejs')%>
             <%# Aquí va todo el contenido principal %>
             <div class="principal">
-                <h1 class="maintitle"><%= pages.data.title %></h1>
+                <h1 class="maintitle"><%= pages.info.title %></h1>
                 <section class="section">
                     <p>En esta sección se puede visualizar los datos generados por el dispositivo.
                         <br>

@@ -3,8 +3,8 @@
 <html lang="es-412" prefix="og: http://ogp.me/ns#">
 
 <head>
-    <title><%= pages.data.title %></title>
-    <meta property="og:title" content="<%= pages.data.title %>" data-rh="true">
+    <title><%= pages.login.title %></title>
+    <meta property="og:title" content="<%= pages.status.title %>" data-rh="true">
     <meta name="description" content="<%= website.description %>" />
     <%- include ('./partials/head.ejs')%>
 </head>
@@ -20,12 +20,10 @@
             <%- include ('partials/menu.ejs')%>
             <%# Aquí va todo el contenido principal %>
             <div class="principal">
-                <h1 class="maintitle"><%= pages.data.title %></h1>
+                <h1 class="maintitle"><%= pages.status.title %></h1>
                 <section class="section">
-                    <p>En esta sección se puede visualizar los datos generados por el dispositivo.
-                        <br>
-                        <br>
-                        * Requiere de una conexión Wi-Fi para funcionar.</p>
+                    <h2 id="conexion">Conexión</h2>
+                    <h2 id="bateria">Batería</h2>
                 </section>
             </div>
         </div>
