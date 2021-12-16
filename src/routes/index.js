@@ -105,7 +105,7 @@ router.get('/en/developing', (req, res) => {
 /*****************************************************/
 router.post('/api', (req, res) => {
   console.log('Están solicitando la API');
-  console.log(req.body);
-  res.status(404).send("No se encontró la página.");
+  // console.log(req.body);
+  res.redirect('/info');
 });
 module.exports = router;
