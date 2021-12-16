@@ -14,7 +14,7 @@ El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señ
 - Con el comando `npm run dev` activamos el módulo de desarrollo `nodemon`, que nos permite actualizar cambios en el web server sin tener que reiniciarlo manualmente.
 
 ```shell
-git clone https://github.com/xenom-flauta-dulce/panic-button-system
+git clone https://github.com/xenom-flauta-dulce/panic-button-system.git
 npm install
 npm run dev
 ```
