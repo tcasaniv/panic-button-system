@@ -48,7 +48,7 @@
                 "message": "Grupo 1"
             },
             "info":{
-                "title": "Datos obtenidos",
+                "title": "Información",
                 "lema": "Alerta de auxilio en un triz.",
                 "description": "Sistema de Botón de Pánico",
                 "url": "/info",
