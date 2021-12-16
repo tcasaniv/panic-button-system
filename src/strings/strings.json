@@ -27,9 +27,27 @@
             },
             "signup":{},
             "status":{},
-            "data":{},
-            "grupo":{},
-            "info":{},
+            "data":{
+                "title": "Datos",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "url": "/data",
+                "message": "Eventos"
+            },
+            "grupo":{
+                "title": "Sobre el Grupo 1",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "url": "/grupo",
+                "message": "Grupo 1"
+            },
+            "info":{
+                "title": "Sobre el Grupo 1",
+                "lema": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "url": "/grupo",
+                "message": "Grupo 1"
+            },
             "maps":{
                 "title": "Ubicación de los dispositivos",
                 "lema": "Alerta de auxilio en un triz.",
