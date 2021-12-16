@@ -4,6 +4,8 @@ El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señ
 # Captura de Pantalla
 
 ![Sistema de Botón de Pánico](src/public/img/Captura001.jpeg)
+![Maps](src/public/img/Captura002.jpeg)
+![Inicio de sesión](src/public/img/Captura003.jpeg)
 
 # Instalación para desarrollo
 - Clona el repositorio en una carpeta local.
