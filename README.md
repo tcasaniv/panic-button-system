@@ -1,7 +1,7 @@
 # Sistema de Botón de Pánico
 El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias.
 
-# Captura de Pantalla
+# Capturas de Pantalla
 
 ![Sistema de Botón de Pánico](src/public/img/Captura001.jpeg)
 ![Maps](src/public/img/Captura002.jpeg)
