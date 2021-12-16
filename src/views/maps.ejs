@@ -10,7 +10,9 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy6-xL5zglfeYB8VRApLdE_OKL2m9kaeM"></script>
 
     <script>
-        var myCenter = new google.maps.LatLng(-22.249613, -45.719585);
+        // var myCenter = new google.maps.LatLng(-22.249613, -45.719585);
+        var myCenter = new google.maps.LatLng(-16.4049287,-71.5287552);
+        
 
         function initialize() {
             var mapProp = {
@@ -33,7 +35,7 @@
                 map.setCenter(marker.getPosition());
             });
             var infowindow = new google.maps.InfoWindow({
-                content: "[ Acidente ] <br>  Placa: MGW-3454 <br> Gravidade: Alta   " //<br>PLACA:A67-435 <br> EVENTO:CV+CL"
+                content: "[ Evento ] <br> UNSA  <br>  ID: ESP-8266 <br> Gravidad: Alta" //<br>PLACA:A67-435 <br> EVENTO:CV+CL"
             });
 
             infowindow.open(map, marker);
