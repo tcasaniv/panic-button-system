@@ -5,7 +5,7 @@ const app = express();
 
 // settings
 app.set('puerto', process.env.PORT || 5500);
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'ejs');
 
 // middlewares
