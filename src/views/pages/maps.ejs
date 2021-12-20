@@ -1,0 +1,64 @@
+<%  //Configura el lugar desde donde toma los strings para la página actual
+    actual_page = pages.maps %>
+<!DOCTYPE html>
+<html lang="<%= website.lang %>" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <%- include ('../partials/head.ejs')%>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy6-xL5zglfeYB8VRApLdE_OKL2m9kaeM"></script>
+    
+    <script>
+        var lat = -16.4049287, lng = -71.5287552;
+        var infoEvent = {
+                content: "[ Evento ] <br> UNSA  <br>  ID: ESP-8266 <br> Tipo: Test"
+            }
+
+        function initialize() {
+            var myCenter = new google.maps.LatLng(lat,lng);
+            var mapProp = {
+                center: myCenter,
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map_id = document.querySelector("#googleMap");
+
+            var map = new google.maps.Map(map_id, mapProp);
+            var marker = new google.maps.Marker( {position: myCenter, animation: google.maps.Animation.BOUNCE} );
+            marker.setMap(map);
+            // Zoom to 16 when clicking on marker
+            google.maps.event.addListener(marker, 'click', function() {
+                map.setZoom(16);
+                map.setCenter(marker.getPosition());
+            });
+            var infowindow = new google.maps.InfoWindow(infoEvent);
+
+            infowindow.open(map, marker);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body dark>
+    <%# Insertar loader %>
+    <%- include ('../partials/loader.ejs')%>
+    <%# Insertar header %>
+    <%- include ('../partials/header.ejs')%>
+
+    <div id="container" class="grid">
+        <div class="separate">
+            <%# Insertar menú lateral %>
+            <%- include ('../partials/menu.ejs')%>
+            <%# Aquí va todo el contenido principal %>
+            <div class="principal">
+                <h1 class="maintitle"><%= actual_page.title %></h1>
+
+                <div id="googleMap" style="width:1020px;height:440px;"></div>
+            </div>
+        </div>
+    </div>
+    <%# Insertar footer %>
+    <%- include ('../partials/footer.ejs')%>
+</body>
+
+</html>

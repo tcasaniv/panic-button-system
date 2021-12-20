@@ -1,0 +1,86 @@
+<%  //Configura el lugar desde donde toma los strings para la página actual
+    actual_page = pages.signUp %>
+<!DOCTYPE html>
+<html lang="<%= website.lang %>" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <%- include ('../partials/head.ejs')%>
+</head>
+
+<body dark>
+    <%# Insertar loader %>
+    <%- include ('../partials/loader.ejs')%>
+    <%# Insertar header %>
+    <%- include ('../partials/header.ejs')%>
+
+    <div id="container" class="grid">
+        <div class="separate">
+            <%# Insertar menú lateral %>
+            <%- include ('../partials/menu.ejs')%>
+            <%# Aquí va todo el contenido principal %>
+            <div class="principal">
+                <h1 class="maintitle"><%= actual_page.title %></h1>
+                <!-- Login box -->
+                <!-- <div class="login">
+                    <table cellspacing="2" align="center" cellpadding="8" border="0">
+                        <tr>
+                            <td>Correo Electrónico:</td>
+                            <td><input type="text" placeholder="Ingrese e-mail aquí" id="email" class="tb" /></td>
+                        </tr>
+                        <tr>
+                            <td>Contraseña:</td>
+                            <td><input type="password" placeholder="Ingrese Contraseña aquí" id="pwd1" class="tb" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Limpiar" onclick="clearFunc()" class="btn" />
+                                <input type="submit" value="Iniciar sesión" class="btn" onClick="login()" />
+                            </td>
+                        </tr>
+                    </table>
+                </div> -->
+                <!-- login box div ending here.. -->
+
+
+                <form action="register" method="post" align="center">
+                    <!-- <div class="imgcontenedor">
+                        <img src="/assets/logo amaterasu.png" height="30px"alt="Avatar" class="avatar">
+                    </div> -->
+                    <table cellspacing="2" align="center" cellpadding="8" border="0">
+                        <tr>
+                            <td><label for="uname"><b>Nombre de usuario:</b></label></td>
+                            <td><input type="text" placeholder="Introduzca usuario" name="uname" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="psw"><b>Contraseña:</b></label></td>
+                            <td><input type="password" placeholder="Introduzca contraseña" name="psw" required></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><label><input type="checkbox" checked="checked" name="remember"> Recuérdame</label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit" class="button">Iniciar sesión</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><span class="psw">¿Olvidó su <a href="#">contraseña?</a></span></td>
+                        </tr>
+                        <tr>
+                            <td><br></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="button" class="cancelbtn button">Cancelar</button></td>
+                        </tr>
+
+                        <!-- </div> -->
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%# Insertar footer %>
+    <%- include ('../partials/footer.ejs')%>
+</body>
+
+</html>

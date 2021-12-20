@@ -1,26 +1,25 @@
+<%  //Configura el lugar desde donde toma los strings para la página actual
+    actual_page = pages.grupo %>
 <!DOCTYPE html>
-<!-- <html lang="es-ES" prefix="og: http://ogp.me/ns#"> -->
-<html lang="es-412" prefix="og: http://ogp.me/ns#">
+<html lang="<%= website.lang %>" prefix="og: http://ogp.me/ns#">
 
 <head>
-    <title><%= pages.login.title %></title>
-    <meta property="og:title" content="<%= pages.grupo.title %>" data-rh="true">
-    <meta name="description" content="<%= website.description %>" />
-    <%- include ('./partials/head.ejs')%>
+    <%- include ('../partials/head.ejs')%>
 </head>
 
 <body dark>
     <%# Insertar loader %>
-    <%- include ('partials/loader.ejs')%>
+    <%- include ('../partials/loader.ejs')%>
     <%# Insertar header %>
-    <%- include ('partials/header.ejs')%>
+    <%- include ('../partials/header.ejs')%>
+
     <div id="container" class="grid">
         <div class="separate">
             <%# Insertar menú lateral %>
-            <%- include ('partials/menu.ejs')%>
+            <%- include ('../partials/menu.ejs')%>
             <%# Aquí va todo el contenido principal %>
             <div class="principal">
-                <h1 class="maintitle"><%= pages.grupo.title %></h1>
+                <h1 class="maintitle"><%= actual_page.title %></h1>
                 <table class="table-dark table">
                     <thead>
                         <tr><th>Apellidos</th>      <th>Nombres</th>            <th>CUI</th>     </tr>
@@ -36,7 +35,7 @@
         </div>
     </div>
     <%# Insertar footer %>
-    <%- include ('partials/footer.ejs')%>
+    <%- include ('../partials/footer.ejs')%>
 </body>
 
 </html>

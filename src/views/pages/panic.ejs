@@ -1,0 +1,43 @@
+<%  //Configura el lugar desde donde toma los strings para la página actual
+    actual_page = pages.panic %>
+<!DOCTYPE html>
+<html lang="<%= website.lang %>" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <%- include ('../partials/head.ejs')%>
+</head>
+
+<body dark>
+    <%# Insertar loader %>
+    <%- include ('../partials/loader.ejs')%>
+    <%# Insertar header %>
+    <%- include ('../partials/header.ejs')%>
+
+    <div id="container" class="grid">
+        <div class="separate">
+            <%# Insertar menú lateral %>
+            <%- include ('../partials/menu.ejs')%>
+            <%# Aquí va todo el contenido principal %>
+            <div class="principal">
+                <h1 class="maintitle"><%= actual_page.title %></h1>
+                <form class="justify-content-center d-flex" action="/panic" method="POST" >
+                    <% 
+                        fecha = new Date();
+                        function zone(fecha) { zone = fecha.toTimeString(); return zone.substring(19, zone.length - 1); } 
+                    %> 
+                    <input type="text" name="id" value="ESP-WEB" placeholder="id">
+                    <input type="text" name="dispositivo" value="WebButton" placeholder="dispositivo" >
+                    <input type="text" name="date" value="<%= fecha.toLocaleDateString() %>" placeholder="Fecha" >
+                    <input type="text" name="time" value="<%= fecha.toLocaleTimeString() %>" placeholder="Hora:Minuto:Segundo" >
+                    <input type="text" name="GMT" value="<%= fecha.toTimeString().substring(9,17) %>" placeholder="GMT">
+                    <input type="text" name="zone" value="<%= zone(fecha); %>" placeholder="Zona horaria">
+                    <input type="submit" value="¡Alertar!" class="button">
+                </form>
+            </div>
+        </div>
+    </div>
+    <%# Insertar footer %>
+    <%- include ('../partials/footer.ejs')%>
+</body>
+
+</html>

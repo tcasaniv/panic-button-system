@@ -1,0 +1,33 @@
+<%  //Configura el lugar desde donde toma los strings para la página actual
+    actual_page = pages.developing %>
+<!DOCTYPE html>
+<html lang="<%= website.lang %>" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <%- include ('../partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/markdown.css" media="all">
+</head>
+
+<body dark>
+    <%# Insertar loader %>
+    <%- include ('../partials/loader.ejs')%>
+    <%# Insertar header %>
+    <%- include ('../partials/header.ejs')%>
+    
+    <div id="container" class="grid">
+        <div class="separate">
+            <%# Insertar menú lateral %>
+            <%- include ('../partials/menu.ejs')%>
+            <%# Aquí va todo el contenido principal %>
+            <div class="principal">
+                <h1 class="maintitle"><%= actual_page.title %></h1>
+                <%# <iframe src="https://raw.githubusercontent.com/xenom-flauta-dulce/panic-button-system/main/README.md" frameborder="0"></iframe> %>
+                <%- include ('../partials/README.ejs')%>
+            </div>
+        </div>
+    </div>
+    <%# Insertar footer %>
+    <%- include ('../partials/footer.ejs')%>
+</body>
+
+</html>

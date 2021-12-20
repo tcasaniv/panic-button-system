@@ -1,0 +1,30 @@
+<%  //Configura el lugar desde donde toma los strings para la página actual
+    actual_page = pages.offline %>
+<!DOCTYPE html>
+<html lang="<%= website.lang %>" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <%- include ('../partials/head.ejs')%>
+</head>
+
+<body dark>
+    <%# Insertar loader %>
+    <%- include ('../partials/loader.ejs')%>
+    <%# Insertar header %>
+    <%- include ('../partials/header.ejs')%>
+
+    <div id="container" class="grid">
+        <div class="separate">
+            <%# Insertar menú lateral %>
+            <%- include ('../partials/menu.ejs')%>
+            <%# Aquí va todo el contenido principal %>
+            <div class="principal">
+                <h1 class="wip"><%= actual_page.message %></h1>
+            </div>
+        </div>
+    </div>
+    <%# Insertar footer %>
+    <%- include ('../partials/footer.ejs')%>
+</body>
+
+</html>
