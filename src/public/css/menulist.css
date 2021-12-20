@@ -25,7 +25,7 @@
     border-radius: 5px;
     padding: 10px;
     border: none;
-    color: white;
+    color: var(--html-main-text);
     font-size: 15px;
     transition-duration: 250ms;
     background-color: #1a1919;
@@ -39,7 +39,7 @@
 
 li {
     display: list-item;
-    color: white;
+    color: var(--html-main-text);
 }
 
 ul {
@@ -50,7 +50,7 @@ ul {
 .categorylist .button {
     border: 0;
     background: transparent;
-    color: white;
+    color: var(--html-main-text);
     padding: 13px;
     margin-top: 15px;
     border-radius: 5px;
@@ -79,12 +79,31 @@ ul {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--html-main-text);
     transition-duration: 250ms;
 }
+
+
 
 
 nav.menulist[collapsed-nav] {
     width: 72px;
     transition: width 250ms cubic-bezier(0,0,0.2,1);
+    margin-bottom: 0px;
+}
+
+.menulink[collapsed-nav] > i {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    width: 80%;
+    background-color: crimson;
+    border-radius: 35%;
+    margin: 8px;
+    text-align: center;
+}
+
+.listmenu[collapsed-nav] > ul,
+.categorylist[collapsed-nav] > ul {
+    display: initial!important;
 }

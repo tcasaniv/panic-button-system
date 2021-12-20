@@ -31,7 +31,7 @@
     border-radius: 5px;
     padding: 10px;
     border: none;
-    color: white;
+    color: var(--html-main-text);
     font-size: 15px;
     transition-duration: 250ms;
     background-color: #1a1919;
@@ -45,7 +45,7 @@
 
 li {
     display: list-item;
-    color: white;
+    color: var(--html-main-text);
 }
 
 ul {
@@ -56,7 +56,7 @@ ul {
 .categorylist button {
     border: 0;
     background: transparent;
-    color: white;
+    color: var(--html-main-text);
     padding: 13px;
     margin-top: 15px;
     border-radius: 5px;
@@ -86,6 +86,6 @@ button:hover {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--html-main-text);
     transition-duration: 250ms;
 }

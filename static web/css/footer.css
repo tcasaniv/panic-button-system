@@ -7,7 +7,7 @@
 }
 
 .sitefooter>h1 {
-    color: white;
+    color: var(--html-main-text);
     justify-content: center;
     display: flex;
     font-size: small;
@@ -20,7 +20,7 @@
 
 .footerlink {
     margin-left: 15px;
-    color: white;
+    color: var(--html-main-text);
     text-decoration: none;
     border-radius: 5px;
     transition-duration: 250ms;

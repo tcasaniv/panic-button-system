@@ -4,12 +4,32 @@ body[dark] {
     --html-bg: #1d1d1d;
     --html-bg-seccond: #232523;
     --html-bg-third: #272727;
-    --html-main-bg: rgb(55, 156, 111);
-    --html-seccond-color: rgb(91, 205, 150);
-    --html-third-color: rgb(119, 212, 171);
+    --html-main-bg: #379c6f;
+    --html-seccond-color: #5bcd96;
+    --html-third-color: #77d4ab;
+    --html-main-text: white;
+    --input-bg: #3b3b3b;
+    --button-bg: #312f31;
+    --button-bg-hover: var(--html-bg-seccond);
     /* --html-link: rgb(82, 199, 148); */
     --html-link: var(--html-seccond-color);
 }
+
+body[light] {
+    --html-bg: white;
+    --html-bg-seccond: #f8f9fa;
+    --html-bg-third: #f2f2f2;
+    --html-main-bg: rgb(55, 156, 111);
+    --html-seccond-color: rgb(91, 205, 150);
+    --html-third-color: rgb(119, 212, 171);
+    --html-main-text: black;
+    --input-bg: var(--html-bg-third);
+    --button-bg: var(--html-bg-third);
+    --button-bg-hover: var(--html-bg-seccond);
+    /* --html-link: rgb(82, 199, 148); */
+    --html-link: var(--html-seccond-color);
+}
+
 body, html {
     background-color: var(--html-bg);
     height: calc(100vh - 8rem);
@@ -43,7 +63,7 @@ body, html {
 .wip {
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--html-main-text);
     margin-top: calc(100% / 1.5);
     font-size: xx-large;
 }
@@ -51,7 +71,7 @@ body, html {
 .main {
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--html-main-text);
     margin-top: 5px;
     font-size: auto;
 }
@@ -64,7 +84,7 @@ body, html {
 }
 
 p {
-    color: white;
+    color: var(--html-main-text);
     margin: 2%;
     /* text-align: center; */
 }

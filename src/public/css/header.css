@@ -46,7 +46,7 @@
 
 .header__navbar--menu--link {
     margin-left: 10px;
-    color: white;
+    color: var(--html-main-text);
     text-decoration: none;
     padding: 15px 15px;
     border-radius: 5px;

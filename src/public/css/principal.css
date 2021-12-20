@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--html-main-text);
     margin-top: 250px;
     font-size: xx-large;
 }
@@ -18,7 +18,7 @@
     /* margin-top: 5px; */
     /* overflow-x: hidden; */
     font-size: 1em;
-    color: white;
+    color: var(--html-main-text);
     width: 100%;
     margin-left: 16px;
     margin-right: 16px;
@@ -28,6 +28,9 @@
     text-align: justify;
 }
 
+p {
+    white-space: break-spaces;
+}
 
 
 
@@ -52,7 +55,7 @@ th {
 thead, tbody, tfoot, tr, td, th {
   border-color: inherit;
   border-style: solid;
-  border-top: 4px solid white;
+  border-top: 4px solid var(--html-main-text);
   border-width: 0px;
   border-right-width: 0px;
   border-left-width: 0px;
@@ -61,12 +64,12 @@ thead, tbody, tfoot, tr, td, th {
 .table-dark {
     --bs-table-bg: #232523;
     --bs-table-striped-bg: #2c3034;
-    --bs-table-striped-color: white;
+    --bs-table-striped-color: var(--html-main-text);
     --bs-table-active-bg: #373b3e;
-    --bs-table-active-color: #fff;
+    --bs-table-active-color: var(--html-main-text);
     --bs-table-hover-bg: #323539;
-    --bs-table-hover-color: white;
-    color: white;
+    --bs-table-hover-color: var(--html-main-text);
+    color: var(--html-main-text);
     /* border-color: #373b3e; */
     border-color: #dee2e6;
 }
@@ -112,8 +115,9 @@ thead:hover {
 }
 
 input {
+    cursor: auto!important;
     text-rendering: auto;
-    color: white;
+    color: var(--html-main-text);
     letter-spacing: normal;
     word-spacing: normal;
     line-height: normal;
@@ -134,7 +138,34 @@ input {
     border-image: initial;
 }
 
+form .button {
+    border: 0;
+    background: #312f31;
+    color: var(--html-main-text);
+    padding: 13px;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+}
+form .button:hover {
+    background-color: var(--html-main-bg);
+    color: var(--html-main-text);
+}
+
+.justify-content-center {
+    justify-content: center!important;
+}
+.d-flex {
+    display: flex!important;
+}
+
 #googleMap {
     color: black;
     width: 100%!important;
+}
+
+pre {
+    margin: 0em 0px;
+    font-family: 'Nunito';
+    white-space: break-spaces;
 }
