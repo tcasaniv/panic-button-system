@@ -6,106 +6,94 @@ const strings = require('../strings/strings.json');
 const es_string = strings.es;
 const en_string = strings.en;
 
+
+/*****************************************************/
+/*                     PÁGINAS                       */
+/*****************************************************/
+function rutas(lang_string){
+  const pages = lang_string.pages;
+  router.get(pages.index.path, (req, res) => {
+    res.render('index', lang_string);
+  });
+  
+  router.get(pages.offline.path, (req, res) => {
+    res.render('offline', lang_string);
+  });
+  
+  router.get(pages.signIn.path, (req, res) => {
+    res.render('signIn', lang_string);
+  });
+  
+  router.get(pages.signUp.path, (req, res) => {
+    res.render('signUp', lang_string);
+  });
+  
+  router.get(pages.status.path, (req, res) => {
+    res.render('status', lang_string);
+  });
+  
+  router.get(pages.data.path, (req, res) => {
+    res.render('data', lang_string);
+  });
+  
+  router.get(pages.grupo.path, (req, res) => {
+    res.render('grupo', lang_string);
+  });
+  
+  router.get(pages.info.path, (req, res) => {
+    res.render('info', lang_string);
+  });
+  
+  router.get(pages.maps.path, (req, res) => {
+    res.render('maps', lang_string);
+  });
+  
+  router.get(pages.developing.path, (req, res) => {
+    res.render('developing', lang_string);
+  });
+}
+
 /*****************************************************/
 /*                PÁGINAS ESPAÑOL                    */
+                rutas  (es_string);
 /*****************************************************/
-router.get('/', (req, res) => {
-  res.render('index', es_string);
-});
-
-router.get('/offline', (req, res) => {
-  res.render('offline', es_string);
-});
-
-router.get('/offline.html', (req, res) => {
-  res.render('offline', es_string);
-});
-
-/*****************************************************/
-/*                PÁGINAS ESPAÑOL                    */
-/*****************************************************/
-
-router.get('/login', (req, res) => {
-  res.render('login', es_string);
-});
-
-router.get('/status', (req, res) => {
-  res.render('status', es_string);
-});
-
-router.get('/data', (req, res) => {
-  res.render('data', es_string);
-});
-
-router.get('/grupo', (req, res) => {
-  res.render('grupo', es_string);
-});
-
-router.get('/info', (req, res) => {
-  res.render('info', es_string);
-});
-
-router.get('/maps', (req, res) => {
-  res.render('maps', es_string);
-});
-
-router.get('/developing', (req, res) => {
-  res.render('developing', es_string);
-});
 
 /*****************************************************/
 /*                ENGLISH PAGES                      */
-/*****************************************************/
-router.get('/en/', (req, res) => {
-  res.render('index', en_string);
-});
-
-router.get('/en/offline', (req, res) => {
-  res.render('offline', en_string);
-});
-
-router.get('/en/offline.html', (req, res) => {
-  res.render('offline', en_string);
-});
-
-/*****************************************************/
-/*                ENGLISH PAGES                      */
+                rutas  (en_string);
 /*****************************************************/
 
-router.get('/en/login', (req, res) => {
-  res.render('login', en_string);
-});
-
-router.get('/en/status', (req, res) => {
-  res.render('status',en_string);
-});
-
-router.get('/en/datos', (req, res) => {
-  res.render('datos', en_string);
-});
-
-router.get('/en/grupo', (req, res) => {
-  res.render('grupo', en_string);
-});
-
-router.get('/en/info', (req, res) => {
-  res.render('info', en_string);
-});
-
-router.get('/en/maps', (req, res) => {
-  res.render('maps', en_string);
-});
-
-router.get('/en/developing', (req, res) => {
-  res.render('developing', en_string);
-});
 
 /*****************************************************/
-/*                 FIN DE RUTAS                      */
+/*                  OTRAS RUTAS                      */
 /*****************************************************/
-router.post('/api', (req, res) => {
-  console.log('Están solicitando la API');
-  // console.log(req.body);
+router.post('/signin', (req, res) => {
+  console.log('Están enviando datos para iniciar sesión.');
+  console.log(req.body);
   res.redirect('/info');
+  // res.json(req.body);
 });
+
+router.post('/signup', (req, res) => {
+  console.log('Están enviando datos para registrarse.');
+  console.log(req.body);
+  res.redirect('/info');
+  // res.json(req.body);
+});
+
+router.post('/panic', (req, res) => {
+  console.log('¡Se ha producido un evento!');
+  console.log(req.body);
+  // res.redirect('/info');
+  res.json(req.body);
+  // console.log('¡Se ha producido un evento!');
+  // console.log('  > Con id: ',req.body.id);
+  // console.log('  > Desde el dispositivo: ',req.body.dispositivo);
+});
+
+router.get('/panic', (req, res) => {
+  res.render('panic', es_string);
+  console.log('Datos enviados correctamente...');
+});
+
 module.exports = router;

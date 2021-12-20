@@ -3,77 +3,120 @@
         "website":{
             "title": "Sistema de Botón de Pánico",
             "description": "El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias.",
+            "lang": "es_ES",
+            "locale": "es_ES",
             "readMore": "Leer más",
-            "url": "http://botondepanico.tk",
-            "webmanifest": "/webmanifest.jsonc",
+            "domain": "http://botondepanico.tk",
+            "webmanifest": "/manifest.json",
+            "image": "https://i.ytimg.com/vi/7STbq-ZYhmY/maxresdefault.jpg",
             "icon": "/img/imglogo.ico",
             "pnglogo": "/img/imglogo.png",
-            "mainurl": "/"
+            "path": "/"
         },
         "pages":{
             "index":{
                 "title": "Sistema de Botón de Pánico",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Sistema de Botón de Pánico",
-                "url": "/",
-                "message": "Bienvenido"
+                "lead": "Alerta de auxilio en un triz.",
+                "description": "El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias.",
+                "path": "/",
+                "message": "Bienvenido",
+                "type": "website"
             },
-            "login":{
+            "signIn":{
                 "title": "Iniciar sesión",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Sistema de Botón de Pánico",
-                "url": "/login",
-                "message": "Login"
+                "lead": "Alerta de auxilio en un triz.",
+                "description": "Inicio de sesión para el Sistema de Botón de Pánico",
+                "path": "/signin",
+                "message": "Login",
+                "type": "website"
             },
-            "signup":{},
+            "signUp":{
+                "title": "Registrarse",
+                "lead": "Alerta de auxilio en un triz.",
+                "description": "Sistema de Botón de Pánico",
+                "path": "/signup",
+                "message": "Registro de usuario",
+                "type": "website"
+            },
             "status":{
                 "title": "Estado",
-                "lema": "Alerta de auxilio en un triz.",
+                "lead": "Alerta de auxilio en un triz.",
                 "description": "Sistema de Botón de Pánico",
-                "url": "/status",
-                "message": "Estado"
+                "path": "/status",
+                "message": "Estado",
+                "type": "website"
             },
             "data":{
                 "title": "Datos",
-                "lema": "Alerta de auxilio en un triz.",
+                "lead": "Alerta de auxilio en un triz.",
                 "description": "Sistema de Botón de Pánico",
-                "url": "/data",
-                "message": "Eventos"
+                "path": "/data",
+                "message": "Eventos",
+                "type": "website"
             },
             "grupo":{
                 "title": "Sobre el Grupo 1",
-                "lema": "Alerta de auxilio en un triz.",
+                "lead": "Alerta de auxilio en un triz.",
                 "description": "Sistema de Botón de Pánico",
-                "url": "/grupo",
-                "message": "Grupo 1"
+                "path": "/grupo",
+                "message": "Grupo 1",
+                "type": "website"
             },
             "info":{
                 "title": "Información",
-                "lema": "Alerta de auxilio en un triz.",
+                "lead": "Alerta de auxilio en un triz.",
                 "description": "Sistema de Botón de Pánico",
-                "url": "/info",
-                "message": "Grupo 1"
+                "path": "/info",
+                "message": "El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio portátil para crear señales de auxilio en casos de emergencias. Permite generar señales SOS desde el dispositivo hacia una interfaz web con sólo presionar el botón de auxilio ante situaciones de riesgo o agresión. Tambien envía un mensaje por correo.\n\nPermite rastrear la ubicación geolocalizada mediante aplicación Web desde una PC o dispositivo móvil (por ejemplo iOS o Android).\nEs ideal como dispositivo de apoyo para personas en riesgo de agresiones (Mujeres en programas de apoyo), Choferes de flotas o vehículos asaltados, Cuidado de Personas de la tercera edad, Adultos mayores con discapacidad, Personas con capacidades especiales, Niños, Deportistas, Pacientes enfermos.\n\n* Requiere de una conexión Wi-Fi para funcionar.",
+                "title2": "Beneficios",
+                "message2": "El botón de pánico es un dispositivo que entrega múltiples beneficios a los dueños o administradores de pequeñas, medianas y grandes empresas, permitiéndole:",
+                "msg2_li": {
+                    "1": {
+                        "li_name": "Anticiparse ante un posible asalto:",
+                        "li_text": "Sus colaboradores, al percatarse de un movimiento sospechoso o de la presencia de un posible delincuente, simplemente deben pulsar el Botón de Pánico para activar el procedimiento de seguridad de Alarmas."
+                    },
+                    "2": {
+                        "li_name": "Proteja a sus colaboradores:",
+                        "li_text": "Permite una rápida reacción en caso de accidentes, caídas aparatosas o emergencias de tipo cardiovascular. En el caso de necesitar asistencia inmediata, sólo se debe pulsar el Botón de pánico."
+                    },
+                    "3": {
+                        "li_name": "Precaución contra incendios u otros siniestros:",
+                        "li_text": "Mediante esta funcionalidad podrá alertar sobre incendios, inundaciones u otro tipo de sucesos que requieren de respuesta inmediata."
+                    }
+                },
+                "type": "website"
             },
             "maps":{
                 "title": "Ubicación de los dispositivos",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Panic Button System",
-                "url": "/maps",
-                "message": "Mapa"
+                "lead": "Alerta de auxilio en un triz.",
+                "description": "Mapa que detalla la ubicación de los eventos registrados por el Sistema de Botón de Pánico.",
+                "path": "/maps",
+                "message": "Mapa",
+                "type": "website"
             },
             "developing":{
                 "title": "Sobre el proyecto",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Panic Button System",
-                "url": "/maps",
-                "message": "Mapa"
+                "lead": "Alerta de auxilio en un triz.",
+                "description": "El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señales de auxilio en casos de emergencias.",
+                "path": "/developing",
+                "message": "Hablando sobre el proyecto.",
+                "type": "website"
+            },
+            "panic":{
+                "title": "ESP-WEB",
+                "lead": "Alerta de auxilio en un triz.",
+                "description": "Botón de Pánico de emergencia SOS Virtual que funciona a través de la web.",
+                "path": "/developing",
+                "message": "Botón de Pánico Virtual.",
+                "type": "website"
             },
             "offline": {
                 "title": "No tienes conexión",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Sistema de Botón de Pánico",
-                "url": "/offline",
-                "message": "Offline"
+                "lead": "Alerta de auxilio en un triz.",
+                "description": "Necesitas conexión para acceder al Sistema de Botón de Pánico",
+                "path": "/offline",
+                "message": "Offline",
+                "type": "website"
             }
         },
         "partials": {
@@ -88,8 +131,9 @@
                 "home": "Página Principal",
                 "search": "Buscar",
                 "login":{
-                    "text": "Login",
-                    "1": "Iniciar sesión"
+                    "text": "Acciones de usuario",
+                    "1": "Iniciar sesión",
+                    "2": "Registrarse"
                 },
                 "status":{
                     "text": "Estado",
@@ -119,81 +163,123 @@
         }
     },
     "en": {
-        
         "website":{
             "title": "Panic Button System",
             "description": "The SOS Emergency Panic Button with Wi-Fi provides a means to create distress signals in case of emergencies.",
+            "lang": "en_US",
+            "locale": "en_US",
             "readMore": "Read more",
-            "url": "http://botondepanico.tk/en/",    
-            "webmanifest": "/webmanifest.jsonc",
+            "domain": "http://botondepanico.tk/en/",
+            "webmanifest":"/manifest.json",
+            "image": "https://i.ytimg.com/vi/7STbq-ZYhmY/maxresdefault.jpg",
             "icon": "/img/imglogo.ico",
             "pnglogo": "/img/imglogo.png",
-            "mainurl": "/"
+            "path":"/en/"
         },
         "pages":{
             "index":{
                 "title": "Panic Button System",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Panic Button System",
-                "url": "/",
-                "message": "Welcome"
+                "lead": "Distress alert in a triz.",
+                "description": "The SOS Emergency Panic Button with Wi-Fi provides a means to create distress signals in emergencies.",
+                "path":"/en/",
+                "message": "Welcome",
+                "type": "website"
             },
-            "login":{
-                "title": "LoadIn",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Panic Button System",
-                "url": "/en/login",
-                "message": "Login"
+            "signIn":{
+                "title": "signIn",
+                "lead": "Distress alert on a triz.",
+                "description": "SignIn for Panic Button System",
+                "path":"/en/signin",
+                "message": "Login",
+                "type": "website"
             },
-            "signup":{},
+            "signUp":{
+                "title": "SignUp",
+                "lead": "Distress alert in a triz.",
+                "description": "SignUp for Panic Button System",
+                "path":"/en/signup",
+                "message": "User registration",
+                "type": "website"
+            },
             "status":{
-                "title": "Estado",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Panic Button System",
-                "url": "/en/status",
-                "message": "Estado"
+                "title": "status",
+                "lead": "Distress alert on a triz.",
+                "description": "panic button system",
+                "path": "/en/status",
+                "message": "Status",
+                "type": "website"
             },
             "data":{
-                "title": "Datos",
-                "lema": "Alerta de auxilio en un triz.",
+                "title": "data",
+                "lead": "Distress alert in a triz.",
                 "description": "Panic Button System",
-                "url": "/en/data",
-                "message": "Eventos"
+                "path":"/en/data",
+                "message": "Events",
+                "type": "website"
             },
             "grupo":{
                 "title": "About Group 1",
-                "lema": "Distress alert in a triz.",
+                "lead": "Distress alert in a triz.",
                 "description": "Panic Button System",
-                "url": "/en/grupo",
-                "message": "Grupo 1"
+                "path":"/en/group",
+                "message": "Group 1",
+                "type": "website"
             },
             "info":{
                 "title": "Information",
-                "lema": "Distress alert in a triz.",
+                "lead": "Distress alert in a triz.",
                 "description": "Panic Button System",
-                "url": "/info",
-                "message": "Grupo 1"
+                "path":"/en/info",
+                "message": "The SOS Emergency Panic Button with Wi-Fi provides a portable means to create distress signals in case of emergencies. It allows you to generate SOS signals from your device to a web interface by simply pressing the distress button in the event of a distress or aggression situation. It also sends a message by mail.\n\nAllows tracking the geolocated location via Web application from a PC or mobile device (e.g. iOS or Android).\nIt is ideal as a support device for people at risk of assault (Women in support programs), Drivers of fleets or assaulted vehicles, Elderly care, Elderly people with disabilities, People with special abilities, Children, Athletes, Sick patients.\n\n* Requires a Wi-Fi connection to operate.",
+                "title2": "Benefits",
+                "message2": "The panic button is a device that delivers multiple benefits to owners or managers of small, medium and large businesses, allowing you to:",
+                "msg2_li": {
+                    "1": {
+                        "li_name": "Anticipate before a possible assault:",
+                        "li_text": "Your employees, upon noticing a suspicious movement or the presence of a possible criminal, simply press the Panic Button to activate the Alarms security procedure."
+                    },
+                    "2": {
+                        "li_name": "Protect your collaborators:",
+                        "li_text": "Allows a quick reaction in case of accidents, dramatic falls or cardiovascular emergencies. In the event of needing immediate assistance, just press the Panic Button."
+                    },
+                    "3": {
+                        "li_name": "Precaution against fire or other casualties:",
+                        "li_text": "Using this functionality you can alert about fires, floods or other types of events that require immediate response."
+                    }
+                },
+                "type": "website"
             },
             "maps":{
-                "title": "Location of devices",
-                "lema": "Distress alert in a triz.",
-                "description": "Panic Button System",
-                "url": "/maps",
-                "message": "Mapa"
+                "title": "Device location",
+                "lead": "Distress alert on a triz.",
+                "description": "Map detailing the location of events recorded by the Panic Button System.",
+                "path":"/en/maps",
+                "message": "Map",
+                "type": "website"
             },
             "developing":{
                 "title": "About the project",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Panic Button System",
-                "url": "/maps",
-                "message": "Mapa"
+                "lead": "Distress alert in a triz.",
+                "description": "SOS Emergency Panic Button with Wi-Fi provides a means to create distress signals in emergencies.",
+                "path":"/en/developing",
+                "message": "Talking about the project.",
+                "type": "website"
+            },
+            "panic":{
+                "title": "ESP-WEB",
+                "lead": "Distress alert in a triz.",
+                "description": "Virtual SOS emergency panic button that works over the web.",
+                "path": "/en/developing",
+                "message": "Virtual Panic Button.",
+                "type": "website"
             },
             "offline": {
-                "title": "No conection",
-                "lema": "Alerta de auxilio en un triz.",
-                "description": "Panic Button System",
-                "url": "/offline",
-                "message": "Offline"
+                "title": "You are offline",
+                "lead": "Distress alert on a triz.",
+                "description": "You need connection to access the Panic Button System",
+                "path":"/en/offline",
+                "message": "Offline",
+                "type": "website"
             }
         },
         "partials": {
@@ -204,33 +290,34 @@
             },
             "header":{},
             "menu": {
-                "button": "Menu",
-                "home": "Home",
+                "button": "menu",
+                "home": "Home Page",
                 "search": "Search",
                 "login":{
-                    "text": "Login",
-                    "1": "LogIn"
+                    "text": "User actions",
+                    "1": "Login",
+                    "2": "Register"
                 },
                 "status":{
                     "text": "Status",
-                    "1": "Conection",
+                    "1": "Login",
                     "2": "Battery"
                 },
                 "data":{
-                    "text": "Data",
-                    "1": "Upload",
-                    "2": "Reload"
+                    "text": "Data obtained",
+                    "1": "Charge",
+                    "2": "Reset"
                 },
                 "info":{
                     "text": "More info",
                     "1": "About group 1",
-                    "2": "About the device",
+                    "2": "About device",
                     "3": "About the project"
                 },
                 "maps":{
-                    "text": "Ubication",
+                    "text": "Location",
                     "1": "Of the devices",
-                    "2": "Alerts"
+                    "2": "Of the alerts"
                 }
             },
             "footer": {
