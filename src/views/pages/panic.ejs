@@ -21,16 +21,20 @@
             <div class="principal">
                 <h1 class="maintitle"><%= actual_page.title %></h1>
                 <form class="justify-content-center d-flex" action="/panic" method="POST" >
-                    <% 
+                    <%
                         fecha = new Date();
                         function zone(fecha) { zone = fecha.toTimeString(); return zone.substring(19, zone.length - 1); } 
                     %> 
-                    <input type="text" name="id" value="ESP-WEB" placeholder="id">
-                    <input type="text" name="dispositivo" value="WebButton" placeholder="dispositivo" >
-                    <input type="text" name="date" value="<%= fecha.toLocaleDateString() %>" placeholder="Fecha" >
+                    <input type="hidden" name="name" value="ESP-WEB" placeholder="id">
+                    <input type="hidden" name="dispositivo" value="WebButton" placeholder="dispositivo" >
+                    <input type="hidden" name="latitude" value="-16.4049287" placeholder="latitud" >
+                    <input type="hidden" name="longitude" value="-71.5287552" placeholder="longitud" >
+                    <input type="hidden" name="type" value="Emergency" placeholder="tipo de evento" >
+                    <input type="hidden" name="fabricacion" value="20-12-2021" placeholder="dispositivo" >
+                    <!-- <input type="text" name="date" value="<%= fecha.toLocaleDateString() %>" placeholder="Fecha" >
                     <input type="text" name="time" value="<%= fecha.toLocaleTimeString() %>" placeholder="Hora:Minuto:Segundo" >
                     <input type="text" name="GMT" value="<%= fecha.toTimeString().substring(9,17) %>" placeholder="GMT">
-                    <input type="text" name="zone" value="<%= zone(fecha); %>" placeholder="Zona horaria">
+                    <input type="text" name="zone" value="<%= zone(fecha); %>" placeholder="Zona horaria"> -->
                     <input type="submit" value="¡Alertar!" class="button">
                 </form>
             </div>
