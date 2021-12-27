@@ -75,7 +75,7 @@
     "id": "4",
     "name": "ESP-8266",
     "dispositivo": "ESP-8266 Button",
-    "owner": "Bryan Valero",
+    "owner": "Jhon Ydme",
     "events": {
       "1": {
         "date": "10-11-2020",
