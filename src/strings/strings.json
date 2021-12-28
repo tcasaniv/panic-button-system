@@ -160,7 +160,8 @@
             "footer": {
                 "copyright": "Todos los derechos reservados al grupo 1 - Smart Cities - UNSA - 2021"
             }
-        }
+        },
+        "users": {}
     },
     "en": {
         "website":{
@@ -323,6 +324,7 @@
             "footer": {
                 "copyright": "All rights reserved to group 1 - Smart Cities - UNSA - 2021"
             }
-        }
+        },
+        "users": {}
     }
 }
