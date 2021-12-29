@@ -6,7 +6,7 @@
 <head>
     <%- include ('../partials/head.ejs')%>
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy6-xL5zglfeYB8VRApLdE_OKL2m9kaeM"></script>
-    <% if(latitude&longitude){}else{var latitude = "-16.4049287"; longitude = 71.5287552;} %> 
+    <% if(latitude&longitude){}else{var latitude = "-16.4049287", longitude = 71.5287552;} %> 
     <script>
         var lat = "<%= latitude  %>" , lng = "<%= longitude  %>";
         var infoEvent = {
