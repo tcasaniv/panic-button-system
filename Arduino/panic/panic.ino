@@ -16,7 +16,7 @@ String longitude = "-71.5287552";
 String type = "Emergency";
 String fabricacion = "19-12-2021";
 
-int estado = 0;
+int estado = 0; //Estado del pulsador como no presionado.
 
 void setup() {
   // Serial.begin(115200);
