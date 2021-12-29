@@ -59,8 +59,8 @@ ul {
 }
 
 
-.button:hover { 
-    background: var(--button-bg-hover);
+.button:hover {
+    background: #312f31;
 }
 
 

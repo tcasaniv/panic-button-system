@@ -4,10 +4,13 @@ body[dark] {
     --html-bg: #1d1d1d;
     --html-bg-seccond: #232523;
     --html-bg-third: #272727;
-    --html-main-bg: rgb(55, 156, 111);
-    --html-seccond-color: rgb(91, 205, 150);
-    --html-third-color: rgb(119, 212, 171);
+    --html-main-bg: #379c6f;
+    --html-seccond-color: #5bcd96;
+    --html-third-color: #77d4ab;
     --html-main-text: white;
+    --input-bg: #3b3b3b;
+    --button-bg: #312f31;
+    --button-bg-hover: var(--html-bg-seccond);
     /* --html-link: rgb(82, 199, 148); */
     --html-link: var(--html-seccond-color);
 }
@@ -20,6 +23,9 @@ body[light] {
     --html-seccond-color: rgb(91, 205, 150);
     --html-third-color: rgb(119, 212, 171);
     --html-main-text: black;
+    --input-bg: var(--html-bg-third);
+    --button-bg: var(--html-bg-third);
+    --button-bg-hover: var(--html-bg-seccond);
     /* --html-link: rgb(82, 199, 148); */
     --html-link: var(--html-seccond-color);
 }

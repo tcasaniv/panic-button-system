@@ -129,7 +129,7 @@ input {
     appearance: auto;
     -webkit-rtl-ordering: logical;
     cursor: text;
-    background-color: var(--input-bg);
+    background-color: #3b3b3b;
     margin: 0em;
     padding: 1px 2px;
     border-width: 2px;
@@ -140,7 +140,7 @@ input {
 
 form .button {
     border: 0;
-    background: var(--button-bg);
+    background: #312f31;
     color: var(--html-main-text);
     padding: 13px;
     border-radius: 5px;
