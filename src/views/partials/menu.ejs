@@ -29,8 +29,12 @@
                             </div>
                         </button>
                         <ul>
-                            <li>
-                                <a class="menulink" href="<%= lang.pages.signIn.path %>">
+                            <li><%# 
+                                <a class="menulink" href="< %= lang.pages.signIn.path % >">
+                                <i class="fas fa-user-astronaut"></i> < % = menu.login[1] % ></a>
+                                %>
+                                <a class="menulink"
+                                    onclick="document.getElementById('id01').style.display='block'" >
                                 <i class="fas fa-user-astronaut"></i> <%= menu.login[1] %></a>
                             </li>
                             <li>

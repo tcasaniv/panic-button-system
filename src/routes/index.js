@@ -15,9 +15,19 @@ const strings = require("../strings/strings.json");
 const es_string = strings.es;
 const en_string = strings.en;
 
-function renderizar(webpath, name_file, idioma, user='null', localization='null'){
+function renderizar(
+    webpath, name_file, idioma,
+    user='null', localization='null', events=false,
+    dispositivo=false
+  ){
   const pages = idioma.pages;
-  var cadena = {lang: idioma, user: user, localization: localization};
+  var cadena = {
+    lang: idioma,
+    user: user,
+    localization: localization,
+    events: events,
+    dispositivo: dispositivo
+  };
   return router.get(webpath, (req, res) => {
     res.render(name_file, cadena );
   });
@@ -40,6 +50,22 @@ function rutas(lang_string) {
   renderizar(pages.maps.path, 'maps', lang_string);
   renderizar(pages.developing.path, 'developing', lang_string);
   // renderizar('/panic', 'panic', lang_string);
+
+  router.get('/ubicacion_en_mapa', (req, res) => {
+    const { latitude, longitude, dispo, user, type, date, time } = req.query;
+    console.log("Mapa en la localización: "+latitude+", "+longitude);
+    res.render("maps", 
+      {
+        lang: es_string,
+        user: user,
+        dispositivo: dispo,
+        latitude: latitude,
+        longitude: longitude,
+        type: type,
+        date: date,
+        time: time
+      } );
+  });
   
   router.get("/panic", (req, res) => {
     res.render("panic", {lang: lang_string, user: 'null', localization: 'null'} );
@@ -57,10 +83,91 @@ rutas(en_string); // ENGLISH PAGES                   ||
 /*****************************************************/
 /*                   RUTAS POST                      */
 /*****************************************************/
+router.post("/index", (req, res) => {
+  console.log("Están enviando datos para iniciar sesión.");
+  const { uname, psw, remember } = req.body;
+  console.log(req.body);
+  res.render("index", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
+  // res.redirect("/info");
+  // res.json(req.body);
+});
+router.post("/offline", (req, res) => {
+  console.log("Están enviando datos para iniciar sesión.");
+  const { uname, psw, remember } = req.body;
+  console.log(req.body);
+  // res.render("offline", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
+  // res.redirect("/info");
+  res.json(req.body);
+});
+router.post("/status", (req, res) => {
+  console.log("Están enviando datos para iniciar sesión.");
+  const { uname, psw, remember } = req.body;
+  console.log(req.body);
+  res.render("status", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
+  // res.redirect("/info");
+  // res.json(req.body);
+});
+router.post("/data", (req, res) => {
+  console.log("Inicio de sesión con los datos.");
+  const { uname, psw, remember } = req.body;
+  console.log(req.body);
+
+  const user = uname;
+  //Definimos el lugar al que agregará los datos del evento y añadimos el JSON
+  const dir_db_name = "usuarios/" + user + "/dispositivos/";
+  
+  const ref = db.ref(dir_db_name);
+  // Attach an asynchronous callback to read the data at our posts reference
+  ref.on( "value", (snapshot) => {
+      console.log(snapshot.val());
+      res.render("data",
+        {
+         lang: es_string,
+         user: {uname: uname, psw: psw, remember: remember},
+         localization: 'null', dispositivo: snapshot.val()
+        }
+      );
+    }, (errorObject) => { console.log("La lectura de datos ha fallado: " + errorObject.name);res.redirect("/data"); }
+  );
+    
+});
+
+router.post("/grupo", (req, res) => {
+  console.log("Están enviando datos para iniciar sesión.");
+  const { uname, psw, remember } = req.body;
+  console.log(req.body);
+  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
+});
+router.post("/info", (req, res) => {
+  console.log("Están enviando datos para iniciar sesión.");
+  const { uname, psw, remember } = req.body;
+  console.log(req.body);
+  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
+  // res.json(req.body);
+});
+router.post("/maps", (req, res) => {
+  console.log("Están enviando datos para iniciar sesión.");
+  const { uname, psw, remember } = req.body;
+  console.log(req.body);
+  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
+  // res.redirect("/info");
+  // res.json(req.body);
+});
+router.post("/developing", (req, res) => {
+  console.log("Están enviando datos para iniciar sesión.");
+  const { uname, psw, remember } = req.body;
+  console.log(req.body);
+  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
+  // res.redirect("/info");
+  // res.json(req.body);
+});
+
 router.post("/signin", (req, res) => {
   console.log("Están enviando datos para iniciar sesión.");
+  const { uname, psw, remember } = req.body;
   console.log(req.body);
-  res.redirect("/info");
+  res.render("panic", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
+  // res.redirect("/info");
   // res.json(req.body);
 });
 
@@ -73,7 +180,7 @@ router.post("/signup", (req, res) => {
 
 router.post("/panic", (req, res) => {
   console.log("¡Se ha producido un evento!");
-  // console.log(req.body);
+  console.log(req.body);
 
   // Obtiene los datos del JSON en variables
   const { name, latitude, longitude, type } = req.body;

@@ -8,9 +8,9 @@
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy6-xL5zglfeYB8VRApLdE_OKL2m9kaeM"></script>
     
     <script>
-        var lat = -16.4049287, lng = -71.5287552;
+        var lat = "<%= latitude  %>" , lng = "<%= longitude  %>";
         var infoEvent = {
-                content: "[ Evento ] <br> UNSA  <br>  ID: ESP-8266 <br> Tipo: Test"
+                content: "[ Evento ] <br>"+ "<%= user %>" + "<br>  ID: "+ "<%= dispositivo %>"+"<br> Tipo: "+"<%= type %>"
             }
 
         function initialize() {
@@ -44,6 +44,8 @@
     <%- include ('../partials/loader.ejs')%>
     <%# Insertar header %>
     <%- include ('../partials/header.ejs')%>
+    <%# Insertar modal login %>
+    <%- include ('../partials/signInmodal.ejs')%>
 
     <div id="container" class="grid">
         <div class="separate">

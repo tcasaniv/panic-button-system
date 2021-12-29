@@ -12,6 +12,8 @@
     <%- include ('../partials/loader.ejs')%>
     <%# Insertar header %>
     <%- include ('../partials/header.ejs')%>
+    <%# Insertar modal login %>
+    <%- include ('../partials/signInmodal.ejs')%>
 
     <div id="container" class="grid">
         <div class="separate">
@@ -23,8 +25,43 @@
                 <section class="section">
                     <p>En esta sección se puede visualizar los datos generados por el dispositivo.
                         <br>
-                        <br>
-                        * Requiere de una conexión Wi-Fi para funcionar.</p>
+                        * Requiere de una conexión Wi-Fi para funcionar.
+                    </p>
+                    <% if (dispositivo) {                                            %>
+                        <table class="table-dark table">
+                            <thead>
+                                <tr>
+                                    <th>Dispositivo</th>        <th>Propietario</th>
+                                    <th>Fecha</th>              <th>Hora</th>
+                                    <th>Latitud</th>            <th>Longitud</th>
+                                    <th>GMT (server)</th>       <th>Tipo</th>
+                                    <th>Mapa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    <% Object.keys(dispositivo).forEach(function(dkeyd) {       %>
+                        <% Object.keys(dispositivo[dkeyd].events).forEach(function(key) {          %>
+                            <% var events=dispositivo[dkeyd].events;
+                            var link = "/ubicacion_en_mapa?"
+                                    + "latitude="+events[key].latitude + "&longitude="+events[key].longitude
+                                    +"&dispo="+dispositivo[dkeyd].name  + "&user="+user.uname
+                                    + "&type="+events[key].type + "&date="+events[key].date + "&time="+events[key].time;
+                            %> 
+                                <tr>
+                                    <td><%- dispositivo[dkeyd].name %></td>   <td><%= user.uname %></td>
+                                    <td><%- events[key].date %></td>        <td><%- events[key].time %></td>
+                                    <td><%- events[key].latitude %></td>    <td><%- events[key].longitude %></td>
+                                    <td><%- events[key].GMT %></td>         <td><%- events[key].type %></td>
+                                    <td><a class="menulink" href="<%= link %>>">Ver en el mapa</a></td>        
+                                </tr>                                           
+                        <% });                                                  
+                     });                                                               %>
+                            </tbody>                                                
+                        </table>                                                
+                     <% } else {                                                       %>
+                        <h2 class="align-center">Debe iniciar sesión primero.</h2>
+                     <% }                                                              %>
+
                 </section>
             </div>
         </div>

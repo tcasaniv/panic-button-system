@@ -12,6 +12,8 @@
     <%- include ('../partials/loader.ejs')%>
     <%# Insertar header %>
     <%- include ('../partials/header.ejs')%>
+    <%# Insertar modal login %>
+    <%- include ('../partials/signInmodal.ejs')%>
 
     <div id="container" class="grid">
         <div class="separate">
@@ -22,10 +24,13 @@
                 <h1 class="maintitle"><%= actual_page.title %></h1>
                 <form class="justify-content-center d-flex" action="/panic" method="POST" >
                     <%
-                        fecha = new Date();
-                        function zone(fecha) { zone = fecha.toTimeString(); return zone.substring(19, zone.length - 1); } 
-                    %> 
-                    <input type="hidden" name="name" value="ESP-WEB" placeholder="id">
+                        if(user!='null'){
+                            name=user.uname;
+                        } else {
+                            name='ESP-WEB';
+                        }
+                    %>
+                    <input type="hidden" name="name" value="<%= name %> " placeholder="id">
                     <input type="hidden" name="description" value="WebButton" placeholder="description" >
                     <input type="hidden" name="latitude" value="-16.4049287" placeholder="latitud" >
                     <input type="hidden" name="longitude" value="-71.5287552" placeholder="longitud" >

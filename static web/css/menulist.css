@@ -78,6 +78,7 @@ ul {
 }
 
 a {
+    cursor: pointer;
     text-decoration: none;
     color: var(--html-main-text);
     transition-duration: 250ms;
