@@ -1,4 +1,4 @@
-<% menu = partials.menu; %> 
+<% menu = lang.partials.menu; %> 
 <div class="menu">
         <nav class="menulist"><!--  collapsed-nav> -->
             <%# 
@@ -6,7 +6,7 @@
                 <input class="searchboxitem" 
                     name="search_query" 
                     type="text" role="combobox" 
-                    placeholder="< %#= partials.menu.search % >" 
+                    placeholder="< %#= lang.partials.menu.search % >" 
                     >
             </div>
             %>
@@ -15,7 +15,7 @@
                     <li class="listmenu">
                         <div class="button">
                             <div class="arrow">
-                                <a class="menulink" href="<%= pages.index.path %>">
+                                <a class="menulink" href="<%= lang.pages.index.path %>">
                                     <i class="fas fa-home"></i> <%= menu.home  %>
                                 </a>
                             </div>
@@ -30,11 +30,11 @@
                         </button>
                         <ul>
                             <li>
-                                <a class="menulink" href="<%= pages.signIn.path %>">
+                                <a class="menulink" href="<%= lang.pages.signIn.path %>">
                                 <i class="fas fa-user-astronaut"></i> <%= menu.login[1] %></a>
                             </li>
                             <li>
-                                <a class="menulink" href="<%= pages.signUp.path %>">
+                                <a class="menulink" href="<%= lang.pages.signUp.path %>">
                                 <i class="fas fa-user-astronaut"></i> <%= menu.login[2] %></a>
                             </li>
                         </ul>
@@ -47,10 +47,10 @@
                             </div>
                         </button>
                         <ul>
-                            <li><a class="menulink" href="<%= pages.status.path %>#conexion">
+                            <li><a class="menulink" href="<%= lang.pages.status.path %>#conexion">
                                 <i class="fas fa-wifi"></i> <%= menu.status[1] %></a>
                             </li>
-                            <li><a class="menulink" href="<%= pages.status.path %>#bateria">
+                            <li><a class="menulink" href="<%= lang.pages.status.path %>#bateria">
                                 <i class="fas fa-battery-three-quarters"></i> <%= menu.status[2] %></a>
                             </li>
                         </ul>
@@ -63,10 +63,10 @@
                             </div>
                         </button>
                         <ul>
-                            <li><a class="menulink" href="<%= pages.data.path %>#cargar">
+                            <li><a class="menulink" href="<%= lang.pages.data.path %>#cargar">
                                 <i class="fas fa-upload"></i> <%= menu.data[1] %></a>
                             </li>
-                            <li><a class="menulink" href="<%= pages.data.path %>#reiniciar">
+                            <li><a class="menulink" href="<%= lang.pages.data.path %>#reiniciar">
                                 <i class="fas fa-redo"></i> <%= menu.data[2] %></a>
                             </li>
                         </ul>
@@ -81,10 +81,10 @@
                             </div>
                         </button>
                         <ul>
-                            <li><a class="menulink" href="<%= pages.grupo.path %>">
+                            <li><a class="menulink" href="<%= lang.pages.grupo.path %>">
                                 <i class="fas fa-briefcase"></i> <%= menu.info[1] %></a>
                             </li>
-                            <li><a class="menulink" href="<%= pages.info.path %>">
+                            <li><a class="menulink" href="<%= lang.pages.info.path %>">
                                 <i class="fas fa-microchip"></i> <%= menu.info[2] %></a>
                             </li>
                         </ul>
@@ -99,10 +99,10 @@
                             </div>
                         </button>
                         <ul>
-                            <li><a class="menulink" href="<%= pages.maps.path %>">
+                            <li><a class="menulink" href="<%= lang.pages.maps.path %>">
                                 <i class="fas fa-location-arrow"></i> <%= menu.maps[1] %></a>
                             </li>
-                            <li><a class="menulink" href="<%= pages.maps.path %>">
+                            <li><a class="menulink" href="<%= lang.pages.maps.path %>">
                                 <i class="fas fa-map-marker-alt"></i> <%= menu.maps[2] %></a>
                             </li>
                         </ul>

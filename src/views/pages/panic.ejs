@@ -1,7 +1,7 @@
 <%  //Configura el lugar desde donde toma los strings para la página actual
-    actual_page = pages.panic %>
+    actual_page = lang.pages.panic %>
 <!DOCTYPE html>
-<html lang="<%= website.lang %>" prefix="og: http://ogp.me/ns#">
+<html lang="<%= lang.website.lang %>" prefix="og: http://ogp.me/ns#">
 
 <head>
     <%- include ('../partials/head.ejs')%>
@@ -31,12 +31,14 @@
                     <input type="hidden" name="longitude" value="-71.5287552" placeholder="longitud" >
                     <input type="hidden" name="type" value="Emergency" placeholder="tipo de evento" >
                     <input type="hidden" name="fabricacion" value="20-12-2021" placeholder="dispositivo" >
-                    <!-- <input type="text" name="date" value="<%= fecha.toLocaleDateString() %>" placeholder="Fecha" >
-                    <input type="text" name="time" value="<%= fecha.toLocaleTimeString() %>" placeholder="Hora:Minuto:Segundo" >
-                    <input type="text" name="GMT" value="<%= fecha.toTimeString().substring(9,17) %>" placeholder="GMT">
-                    <input type="text" name="zone" value="<%= zone(fecha); %>" placeholder="Zona horaria"> -->
                     <input type="submit" value="¡Alertar!" class="button">
                 </form>
+                <% if (localization!='null') { %>
+                    <p>La fecha es <%= localization.date %></p>
+                <% } %>
+                <% if (user!='null') { %>
+                    <p>El usuario es <%= user %></p>
+                <% } %>
             </div>
         </div>
     </div>
