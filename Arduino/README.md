@@ -1,6 +1,6 @@
 # Código y esquema del circuito para el Botón de Pánico
 
-Aquí se encuentra una carpeta con el código a subir al NodeMcu ESP-12E (ESP-8266); además de un archivo creado con el programa Fritzing, este detalla el esuqema de las conexiones para el dispositivo físico.
+Aquí se encuentra una carpeta con el código a subir al NodeMcu ESP-12E (ESP-8266); además de un archivo creado con el programa Fritzing, este detalla el diagrama de las conexiones para el dispositivo físico.
 
 ## Código NodeMcu ESP-12E
 
@@ -13,7 +13,7 @@ const char *ssid = "YOUR_SSID"; //Nombre de la red
 const char *password = "YOUR_PASSWORD"; //Contraseña
 ```
 
-## Consideraciones
+## Consideraciones sobre compatibilidad con otros módulos
 
 El proyecto se realizó con el módulo ESP-8266, pero de ser necesario utilizar un reemplazo, podría lograrse con el módulo ESP-32 fácilmente, solo cambiando dos líneas de código referentes a las librerias importadas.
 
@@ -34,6 +34,10 @@ Por estas otras líneas:
 ```
 
 **Importante asegurarse que las conexiones correspondan al módulo utilizado.**
+
+## Consideraciones
+
+Se incluyó un led en el circuito, pero este solo es para verificar que el pulsador esté funcionando correctamente sin tener que ver el monitor serial. Por lo que, se puede omitir su inclusión sin afectar el funcionamiento del botón de pánico.
 
 ### Diagrama de conexión protoboard
 
