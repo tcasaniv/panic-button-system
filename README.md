@@ -10,8 +10,9 @@ El Botón de pánico de emergencia SOS con Wi-Fi brinda un medio para crear señ
 # Instalación para desarrollo
 - Clona el repositorio en una carpeta local.
 - Abre la consola o terminal en la raiz del proyecto (en Visual Studio Code se abre con `Ctrl+Ñ`).
-- Ejecuta `npm install` para instalar los módulos requeridos como `Express`, `Morgan` y `EJS`.
-- Con el comando `npm run dev` activamos el módulo de desarrollo `nodemon`, que nos permite actualizar cambios en el web server sin tener que reiniciarlo manualmente.
+- Ejecuta `npm install` para instalar los módulos requeridos como `Express`, `Morgan`, `EJS` y `firebase-admin`.
+- **En caso de solo querer iniciar el servidor usar el comando `npm start` para ello.**
+- En caso de querer iniciar el servidor con fines de desarrollo usar el comando `npm run dev` para activar el módulo de desarrollo `nodemon`, que nos permite actualizar cambios en el web server sin tener que reiniciarlo manualmente.
 
 ```shell
 git clone https://github.com/xenom-flauta-dulce/panic-button-system.git
@@ -23,15 +24,16 @@ luego visita en el navegador: `localhost:5500`
 # Personalización
 - `puerto`, este es el puerto http del server. por defecto es `5500`.
 Para cambiarlo, ir a `src\index.js` y configurar el número de puerto en la línea:
-```
+```javascript
 app.set('puerto', process.env.PORT || 5500);
 ```
 
 ## Tareas Pendientes
 
-- [ ] Agregar código arduino que envía datos para la alarma al presionar botón.
+- [x] Agregar código arduino que envía datos para la alarma al presionar botón.
 - [ ] Permitir inicio de sesión mediante JSON o Google.
 - [ ] Visualizar los eventos en forma de tabla y/u otro tipo de gráficos estadísticos.
-- [ ] Conectar los datos de Arduino mediante POST con la API de Google Maps.
+- [x] Conectar los datos de Arduino mediante POST con la API de Google Maps.
+- [x] Conectar el servidor con Firebase Realtime Database.
 - [x] Tema oscuro
 - [ ] Tema claro
