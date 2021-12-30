@@ -87,8 +87,7 @@ router.post("/index", (req, res) => {
   console.log("Están enviando datos para iniciar sesión.");
   const { uname, psw, remember } = req.body;
   console.log(req.body);
-  res.render("index", {lang: es_string, user: {uname: uname, psw: psw, remember: remember},
-   localization: 'null', dispositivo: false} );
+  res.render("index", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
   // res.redirect("/info");
   // res.json(req.body);
 });
@@ -104,8 +103,7 @@ router.post("/status", (req, res) => {
   console.log("Están enviando datos para iniciar sesión.");
   const { uname, psw, remember } = req.body;
   console.log(req.body);
-  res.render("status", {lang: es_string, user: {uname: uname, psw: psw, remember: remember},
-   localization: 'null', dispositivo: false} );
+  res.render("status", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
   // res.redirect("/info");
   // res.json(req.body);
 });
@@ -138,20 +136,20 @@ router.post("/grupo", (req, res) => {
   console.log("Están enviando datos para iniciar sesión.");
   const { uname, psw, remember } = req.body;
   console.log(req.body);
-  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null', dispositivo: false} );
+  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
 });
 router.post("/info", (req, res) => {
   console.log("Están enviando datos para iniciar sesión.");
   const { uname, psw, remember } = req.body;
   console.log(req.body);
-  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null', dispositivo: false} );
+  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
   // res.json(req.body);
 });
 router.post("/maps", (req, res) => {
   console.log("Están enviando datos para iniciar sesión.");
   const { uname, psw, remember } = req.body;
   console.log(req.body);
-  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null', dispositivo: false} );
+  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
   // res.redirect("/info");
   // res.json(req.body);
 });
@@ -159,8 +157,7 @@ router.post("/developing", (req, res) => {
   console.log("Están enviando datos para iniciar sesión.");
   const { uname, psw, remember } = req.body;
   console.log(req.body);
-  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember},
-   localization: 'null', dispositivo: false} );
+  res.render("data", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
   // res.redirect("/info");
   // res.json(req.body);
 });
@@ -169,8 +166,7 @@ router.post("/signin", (req, res) => {
   console.log("Están enviando datos para iniciar sesión.");
   const { uname, psw, remember } = req.body;
   console.log(req.body);
-  res.render("panic", {lang: es_string, user: {uname: uname, psw: psw, remember: remember},
-   localization: 'null'} );
+  res.render("panic", {lang: es_string, user: {uname: uname, psw: psw, remember: remember}, localization: 'null'} );
   // res.redirect("/info");
   // res.json(req.body);
 });
@@ -209,30 +205,16 @@ router.post("/panic", (req, res) => {
     };  
     console.log(newevent);
     // Obtener usuario y dispositivo
-    const user = name;
-    const ref = db.ref("usuarios");
-    // Attach an asynchronous callback to read the data at our posts reference
-    ref.on( "value", (snapshot) => {
-        console.log(snapshot.val());
-        /*Object.keys(usuario).forEach(
-          function(ukeyu){
-            if(usuario[ukeyu].name==name){
-              var id_dispo = dkeyd;
-              //Definimos el lugar al que agregará los datos del evento y añadimos el JSON
-              const dir_db_name = "usuarios/" + user + "/dispositivos/" + id_dispo + "/events";
-              db.ref(dir_db_name).push(newevent);
-            }
-          }
-        );*/
 
-      }, (errorObject) => { console.log("La lectura de datos ha fallado: " + errorObject.name); }
-    );
-    
-    
-    
+    const user = name;
+    const id_dispo = "1";
+    //Definimos el lugar al que agregará los datos del evento y añadimos el JSON
+    const dir_db_name =
+      "usuarios/" + user + "/dispositivos/" + id_dispo + "/events";
+    db.ref(dir_db_name).push(newevent);
     //res.redirect('/data');
-    /*
-    const ref = db.ref("usuarios");
+
+    /*const ref = db.ref("usuarios");
     // Attach an asynchronous callback to read the data at our posts reference
     ref.on( "value", (snapshot) => {
         console.log(snapshot.val());
@@ -243,7 +225,7 @@ router.post("/panic", (req, res) => {
     // Devuelve respuesta de confirmación
     // res.json(newevent);
     // res.redirect('/panic');
-    res.render("panic", {lang: es_string, user: 'null', localization: newevent, dispositivo: false} );
+    res.render("panic", {lang: es_string, user: 'null', localization: newevent} );
   } else if(uname&&psw) {
     res.render("panic", {lang: es_string, user: {uname: uname, psw: psw, remember: remember},
     localization: 'null', dispositivo: false} );
