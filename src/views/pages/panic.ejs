@@ -26,23 +26,25 @@
                     <%
                         if(user!='null'){
                             name=user.uname;
+                            var type = "Emergency";
                         } else {
                             name='ESP-WEB';
+                            var type='Test';
                         }
                     %>
                     <input type="hidden" name="name" value="<%= name %> " placeholder="id">
                     <input type="hidden" name="description" value="WebButton" placeholder="description" >
                     <input type="hidden" name="latitude" value="-16.4049287" placeholder="latitud" >
                     <input type="hidden" name="longitude" value="-71.5287552" placeholder="longitud" >
-                    <input type="hidden" name="type" value="Emergency" placeholder="tipo de evento" >
+                    <input type="hidden" name="type" value="<%= type %> " placeholder="tipo de evento" >
                     <input type="hidden" name="fabricacion" value="20-12-2021" placeholder="dispositivo" >
                     <input type="submit" value="¡Alertar!" class="button">
                 </form>
                 <% if (localization!='null') { %>
-                    <p>La fecha es <%= localization.date %></p>
+                    <p>La hora es <%= localization.time %></p>
                 <% } %>
                 <% if (user!='null') { %>
-                    <p>El usuario es <%= user %></p>
+                    <p>El usuario es <%= user.uname %></p>
                 <% } %>
             </div>
         </div>

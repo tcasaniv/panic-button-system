@@ -106,7 +106,7 @@
                 "title": "ESP-WEB",
                 "lead": "Alerta de auxilio en un triz.",
                 "description": "Botón de Pánico de emergencia SOS Virtual que funciona a través de la web.",
-                "path": "/developing",
+                "path": "/panic",
                 "message": "Botón de Pánico Virtual.",
                 "type": "website"
             },
