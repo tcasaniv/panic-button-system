@@ -174,8 +174,22 @@ router.post("/signin", (req, res) => {
 router.post("/signup", (req, res) => {
   console.log("Están enviando datos para registrarse.");
   console.log(req.body);
-  res.redirect("/info");
-  // res.json(req.body);
+
+  const { uname, psw, remember } = req.body;
+  var user="user",name ="nuevousuario";
+  if (uname && psw) {
+    name = "nuevousuario";
+    user = uname;
+  } else {var user = "usuarionuevo";}
+    //Definimos el lugar al que agregará los datos del evento y añadimos el JSON
+    const dir_db_name =
+      "usuarios/" + user;
+      const newevent = {
+        email: user,
+        name: name,
+        password: psw
+      }
+    db.ref(dir_db_name).push(newevent);
 });
 
 router.post("/panic", (req, res) => {
@@ -225,7 +239,11 @@ router.post("/panic", (req, res) => {
     // Devuelve respuesta de confirmación
     // res.json(newevent);
     // res.redirect('/panic');
-    res.render("panic", {lang: es_string, user: 'null', localization: newevent} );
+    if (name=="ESP-82B2E6"){
+      res.json({"Respuesta": "Todo bien"})
+    } else {
+      res.render("panic", {lang: es_string, user: 'null', localization: newevent} );
+    }    
   } else if(uname&&psw) {
     res.render("panic", {lang: es_string, user: {uname: uname, psw: psw, remember: remember},
     localization: 'null', dispositivo: false} );
